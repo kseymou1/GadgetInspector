@@ -1,0 +1,14 @@
+﻿[
+  {
+    "outputFile": "src/components/layout/styles/layout.css",
+    "inputFile": "src/components/layout/styles/layout.scss"
+  },
+  {
+    "outputFile": "src/components/layout/main-navigation/styles/main-navigation.css",
+    "inputFile": "src/components/layout/main-navigation/styles/main-navigation.scss"
+  },
+  {
+    "outputFile": "src/components/grid/styles/grid.css",
+    "inputFile": "src/components/grid/styles/grid.scss"
+  }
+]

@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Email\Templates\HeaderBodyTemplate.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Email\Templates\HeaderBodyTemplate.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.23.0" />
+    <PackageReference Include="ClosedXML" Version="0.104.2" />
+    <PackageReference Include="FourCee.Caching8" Version="1.0.0" />
+    <PackageReference Include="FourCee.Messaging6" Version="1.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="9.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="9.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BPLubricants.Retail.Core\BPLubricants.Retail.Core.csproj" />
+    <ProjectReference Include="..\BPLubricants.Retail.Data\BPLubricants.Retail.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Product\Views\Support\" />
+    <Folder Include="Promotions\PromotionDetails\Helpers\UpdateHelper\" />
+  </ItemGroup>
+
+</Project>

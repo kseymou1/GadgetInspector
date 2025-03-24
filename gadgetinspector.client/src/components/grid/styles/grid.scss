@@ -1,0 +1,42 @@
+//@import "../../../support/style-variables/style-variables.scss";
+
+//Give lots of min-heights becuase AG wants to have 0 height.
+
+.grid-container {
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+
+    div[style="height: 100%;"] {
+        min-height: 100%;
+        max-height: 100%;
+        display: flex;
+    }
+
+    .ag-root-wrapper {
+        min-width: 100%;
+        min-height: 65vh;
+        //.ag-root-wrapper-body
+        &-body {
+
+            .ag-overlay {
+                //KS: Keep this part - important to make the overlays work
+                //The loading overlay is fine as is.  It centers itself in the rows area
+                //&:has(.ag-overlay-loading-center) {
+                //}
+                //But it fails if there is a "No Rows" overlay. Because there are now rows!
+                //So we only change the positioning of the parent, if it has a no-rows component inside it.
+                &:has(.ag-overlay-no-rows-center) {
+                    position: relative;
+                    padding: .5rem;
+                    letter-spacing: 0.03rem;
+                }
+            }
+        }
+    }
+}
+
+.ag-theme-quartz {
+    // https://www.ag-grid.com/javascript-data-grid/global-style-customisation-colours/
+    --ag-active-color: #00148C;
+}

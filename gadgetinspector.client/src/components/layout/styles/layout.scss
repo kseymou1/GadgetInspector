@@ -1,0 +1,16 @@
+@import "../../../support/style-variables/style-variables.scss";
+
+#app-top-bar {
+    border-bottom: 2px solid $primary-color;
+}
+
+.page-title-bar {
+    h2 {
+        color: $primary-color;
+    }
+}
+
+select {
+    padding: .5em 1em;
+    border-radius: $standard-border-radius;
+}

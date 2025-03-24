@@ -1,0 +1,12 @@
+﻿#app-top-bar {
+  border-bottom: 2px solid #00148C;
+}
+
+.page-title-bar h2 {
+  color: #00148C;
+}
+
+select {
+  padding: 0.5em 1em;
+  border-radius: 6px;
+}

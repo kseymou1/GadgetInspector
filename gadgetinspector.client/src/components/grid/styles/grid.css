@@ -1,0 +1,30 @@
+﻿.grid-container {
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+}
+.grid-container div[style="height: 100%;"] {
+  min-height: 100%;
+  max-height: 100%;
+  display: flex;
+}
+.grid-container .ag-root-wrapper {
+  min-width: 100%;
+  min-height: 65vh;
+}
+.grid-container .ag-root-wrapper-body {
+  /*      .ag-cell {
+            &.invalid-value-cell {
+                background-color: red;
+            }
+        }*/
+}
+.grid-container .ag-root-wrapper-body .ag-overlay:has(.ag-overlay-no-rows-center) {
+  position: relative;
+  padding: 0.5rem;
+  letter-spacing: 0.03rem;
+}
+
+.ag-theme-quartz {
+  --ag-active-color: #00148C;
+}
