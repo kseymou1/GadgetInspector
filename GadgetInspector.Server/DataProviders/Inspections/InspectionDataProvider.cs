@@ -13,6 +13,7 @@ public class InspectionDataProvider(
         Inspection incompleteInspection = await inspectionService.GetIncompleteInspectionForGadgetAsync(request.GadgetId);
 
         incompleteInspection.TechnicianId = request.TechnicianId;
+        incompleteInspection.EditedByUserId = request.EditedByUserId;
 
         await inspectionService.UpdateAsync(incompleteInspection);
     }
@@ -22,6 +23,7 @@ public class InspectionDataProvider(
         Inspection incompleteInspection = await inspectionService.GetIncompleteInspectionForGadgetAsync(request.GadgetId);
 
         incompleteInspection.ScheduledDate = request.ScheduledDate;
+        incompleteInspection.EditedByUserId = request.EditedByUserId;
 
         await inspectionService.UpdateAsync(incompleteInspection);
     }
@@ -50,6 +52,7 @@ public class InspectionDataProvider(
         inspection.IsPassed = true;
         inspection.CompletionDate = request.CompletedDate;
         inspection.InspectorNotes = request.Notes;
+        inspection.EditedByUserId = request.EditedByUserId;
 
         await inspectionService.UpdateAsync(inspection);
     }
