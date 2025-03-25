@@ -12,17 +12,13 @@
   min-width: 100%;
   min-height: 65vh;
 }
-.grid-container .ag-root-wrapper-body {
-  /*      .ag-cell {
-            &.invalid-value-cell {
-                background-color: red;
-            }
-        }*/
-}
 .grid-container .ag-root-wrapper-body .ag-overlay:has(.ag-overlay-no-rows-center) {
   position: relative;
   padding: 0.5rem;
   letter-spacing: 0.03rem;
+}
+.grid-container .ag-root-wrapper-body.ag-layout-normal {
+  height: 100%;
 }
 
 .ag-theme-quartz {
