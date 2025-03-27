@@ -62,28 +62,33 @@ export default function GadgetsGrid(props) {
     const columnDefinitions = useMemo(() => [
         {
             flex: 1,
+            minWidth: 120,
             field: "gadgetTypeName",
             headerName: "Type",
         },
         {
             flex: 1,
+            minWidth: 120,
             field: "gadgetName",
             headerName: "Gadget",
         },
         {
             flex: 1,
+            minWidth: 120,
             field: "lastInspectedDate",
             valueFormatter: params => getDateStringFromJsDate(params.value),
             getQuickFilterText: params => getDateStringFromJsDate(params.value),
         },
         {
             flex: 1,
+            minWidth: 120,
             field: "dueDate",
             valueFormatter: params => getDateStringFromJsDate(params.value),
             getQuickFilterText: params => getDateStringFromJsDate(params.value),
         },
         {
             flex: 1,
+            minWidth: 120,
             field: "daysRemaining",
             type: "rightAligned",
             sort: "asc",
@@ -100,6 +105,7 @@ export default function GadgetsGrid(props) {
         },
         {
             flex: 1,
+            minWidth: 120,
             field: "scheduledDate",
             valueFormatter: params => getDateStringFromJsDate(params.value),
             getQuickFilterText: params => getDateStringFromJsDate(params.value),
@@ -109,6 +115,7 @@ export default function GadgetsGrid(props) {
         },
         {
             flex: 1,
+            minWidth: 120,
             field: "scheduledTechnicianName",
             headerName: "Scheduled Technician",
             editable: true,
