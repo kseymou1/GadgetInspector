@@ -361,3 +361,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/GadgetInspector.Server/Properties/ServiceDependencies/gadget-inspector - FTP/profile.arm.json
+/GadgetInspector.Server/Properties/ServiceDependencies/gadget-inspector - Zip Deploy/profile.arm.json
