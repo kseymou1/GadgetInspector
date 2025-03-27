@@ -61,24 +61,29 @@ export default function GadgetsGrid(props) {
     //AG recommends useMemo for grid options
     const columnDefinitions = useMemo(() => [
         {
+            flex: 1,
             field: "gadgetTypeName",
             headerName: "Type",
         },
         {
+            flex: 1,
             field: "gadgetName",
             headerName: "Gadget",
         },
         {
+            flex: 1,
             field: "lastInspectedDate",
             valueFormatter: params => getDateStringFromJsDate(params.value),
             getQuickFilterText: params => getDateStringFromJsDate(params.value),
         },
         {
+            flex: 1,
             field: "dueDate",
             valueFormatter: params => getDateStringFromJsDate(params.value),
             getQuickFilterText: params => getDateStringFromJsDate(params.value),
         },
         {
+            flex: 1,
             field: "daysRemaining",
             type: "rightAligned",
             sort: "asc",
@@ -94,6 +99,7 @@ export default function GadgetsGrid(props) {
             },
         },
         {
+            flex: 1,
             field: "scheduledDate",
             valueFormatter: params => getDateStringFromJsDate(params.value),
             getQuickFilterText: params => getDateStringFromJsDate(params.value),
@@ -102,6 +108,7 @@ export default function GadgetsGrid(props) {
             onCellValueChanged: handleScheduledDateChange,
         },
         {
+            flex: 1,
             field: "scheduledTechnicianName",
             headerName: "Scheduled Technician",
             editable: true,
@@ -120,7 +127,7 @@ export default function GadgetsGrid(props) {
         gridOpts.quickFilterText = quickFilterText;
         gridOpts.suppressRowHoverHighlight = true;
         gridOpts.singleClickEdit = true; //default is double-click
-
+        gridOpts.popupParent = document.body; //This is to stop the grid from containing the typeahead results and looking weird
         const onGridReady = (params) => {
             //Initialize gridApi
             setGridApi(params.api);
