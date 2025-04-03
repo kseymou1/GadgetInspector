@@ -5,9 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace GadgetInspector.Services.Gadgets;
 
-public class GadgetsGridService(
-    MainDbContext mainDbContext
-    ) : IGadgetsGridService
+public class GadgetsGridService(IServiceCommon serviceCommon) : BaseService(serviceCommon), IGadgetsGridService
 {
     public async Task<IList<GadgetsGridItem>> GetGridItemsAsync(GadgetsGridRequest request)
     {
@@ -17,6 +15,6 @@ public class GadgetsGridService(
             new("@gadgetTypeId", request.GadgetTypeId is null ? DBNull.Value : request.GadgetTypeId)
         ];
 
-        return await mainDbContext.GadgetsGridItems.FromSqlRaw(sql, sqlParams).ToListAsync();
+        return await ServiceCommon.MainDbContext.GadgetsGridItems.FromSqlRaw(sql, sqlParams).ToListAsync();
     }
 }
